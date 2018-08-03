@@ -150,6 +150,20 @@ if (msg.content === 'selamın aleyküm') {
   
 });
 
+    var oyun = [
+        "bu bir testtir 1",
+        "Bu Bir Testtir",
+        "Bu Bir Testtir 3",
+        " Bu Bir Testtir sikik4"
+    ];
+
+    setInterval(function() {
+
+        var random = Math.floor(Math.random()*(oyun.length-0+1)+0);
+
+        client.user.setGame(oyun[random], "https://www.twitch.tv/scarew0");
+        }, 2 * 2500);
+
 client.elevation = message => {
   if(!message.guild) {
 	return; }
